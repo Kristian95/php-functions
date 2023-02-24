@@ -1,19 +1,19 @@
 <?php
 
-$array =  [ [1, 2, 3], [4, 5, 6], [7, 8, 9, 10, 12] ];
+$array = [ [1, 2, 3], [4, 5, 6], [7, 8, 9, 10, 12] ];
 
-filterEventNumbers($array);
+filterEvenNumbers($array);
 
-function filterEventNumbers($array): array
+function filterEvenNumbers($array): array
 {
-    $returnArray = [];
+    $newArray = [];
     foreach ($array as $index => $data) {
         foreach ($data as $key => $value) {
             if ($value % 2 === 0) {
-                $returnArray[$index][] = $value;
+                $newArray[$index][] = $value;
             }
         }
     }
 
-    return $returnArray;
+    return $newArray;
 }
